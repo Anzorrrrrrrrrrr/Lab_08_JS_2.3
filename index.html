@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Події з addEventListener</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Події з використанням addEventListener</h1>
+  
+  <button id="clickBtn">Натисни мене</button>
+  <button id="hoverBtn">Наведи на мене</button>
+  <p id="output"></p>
+
+  <script>
+    const clickBtn = document.getElementById('clickBtn');
+    const hoverBtn = document.getElementById('hoverBtn');
+    const output = document.getElementById('output');
+
+    clickBtn.addEventListener('click', function() {
+      output.textContent = 'Кнопку натиснуто!';
+    });
+
+    hoverBtn.addEventListener('mouseover', function() {
+      output.textContent = 'Миша наведена на кнопку!';
+    });
+
+    hoverBtn.addEventListener('mouseout', function() {
+      output.textContent = '';
+    });
+  </script>
+</body>
+</html>
